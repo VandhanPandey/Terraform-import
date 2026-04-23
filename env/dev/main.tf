@@ -33,3 +33,23 @@ module "vpc" {
     ManagedBy   = "Terraform"
   }
 }
+
+module "web_sg" {
+  source = "../../modules/security-group"
+
+  name   = "dev-web-sg"
+
+  vpc_id = module.vpc.vpc_id
+
+  ingress_rules = [
+    {
+      port = 22
+      cidr = "0.0.0.0/0"
+    }
+  ]
+
+  tags = {
+    Environment = "dev"
+    ManagedBy   = "Terraform"
+  }
+}
