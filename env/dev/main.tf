@@ -1,6 +1,6 @@
 /*resource "aws_s3_bucket" "tf_bucket" {
   bucket = "export-test-vandhan"
-}*/
+}
 
 module "logs_bucket"{
   source = "../../modules/s3"
@@ -11,4 +11,4 @@ module "logs_bucket"{
     Environment = "dev"
     ManagedBy   = "Terraform"
   }
-}
+}*/
