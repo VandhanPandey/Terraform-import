@@ -5,7 +5,7 @@
 module "logs_bucket"{
   source = "../../modules/s3"
 
-  bucket_name = "dev-logs-bucket"
+  bucket_name = "dev-logs-bucket-vandhan"
 
   tags = {
     Environment = "dev"
